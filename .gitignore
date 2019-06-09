@@ -57,6 +57,6 @@ freeline_project_description.json
 # Informal version
 app/debug
 app/dev
-app/alph
+app/alpha
 app/beta
 app/rc
