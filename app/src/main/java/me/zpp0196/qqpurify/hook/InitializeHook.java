@@ -11,6 +11,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
 import me.zpp0196.library.xposed.XLog;
 import me.zpp0196.library.xposed.XMethodHook;
 import me.zpp0196.qqpurify.hook.base.BaseHook;
+import me.zpp0196.qqpurify.hook.earlier.EarlierSupport;
 import me.zpp0196.qqpurify.hook.utils.QQClasses;
 import me.zpp0196.qqpurify.hook.utils.QQDialogUtils;
 import me.zpp0196.qqpurify.hook.utils.XLogUtils;
@@ -120,6 +121,7 @@ public class InitializeHook implements Constants, QQClasses, IXposedHookLoadPack
                     System.currentTimeMillis() - hookInitStartTime));
             XLog.d(TAG, "================================================");
         }
+        new EarlierSupport(context).init();
         XLog.d(TAG, String.format("Loading all the hooks cost: %s ms",
                 System.currentTimeMillis() - allHooksInitStartTime));
     }

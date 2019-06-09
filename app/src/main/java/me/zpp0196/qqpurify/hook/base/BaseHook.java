@@ -51,7 +51,6 @@ public abstract class BaseHook implements SettingUtils.ISetting, Constants, QQCl
 
     public void init() {
         invokeHookClassMethod(this);
-        invokeHookClassMethod(new EarlierSupport(mContext));
     }
 
     private Object getSettingValue(Method method) {
